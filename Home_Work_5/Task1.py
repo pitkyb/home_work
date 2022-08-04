@@ -1,9 +1,11 @@
-start = True
-while start == True:
-   num1 = input("Введите число: ")
-   num2 = set(num1)
-   if len(num1) != len(num2):
-      print('Да')
-   elif len(num1) == len(num2):
-      print('НЕТ')
-      start = False
+num = int(input("Введите число: "))
+while num > 10:
+    alfa = num // 10
+    gamma = num % 10
+    num //= 10
+    while alfa != 0:
+        if gamma == alfa % 10:
+            print('ДА')
+            exit()
+        alfa = alfa // 10
+print('НЕТ')
