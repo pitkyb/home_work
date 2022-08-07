@@ -15,3 +15,4 @@ print("Сумма четных чисел: " + str(sum(num)))
 num2 = [i for i in numbers_list if i % 2 == 1]
 print("Нечетные числа :" + str((num2)))
 print("Сумма нечетных чисел: " + str(sum(num2)))
+num3 = [i for i in numbers_list if i % 2 == 1]
