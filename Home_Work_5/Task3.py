@@ -1,18 +1,31 @@
-numbers_list = []
+numbers_list = 0
+sum = 0
+ser = 0
+del1 = 0
+del2 = 0
+q = 0
+qmax = 0
+qmin = 0
 while True:
-   numbers = int(input("Введите числа: "))
-   if numbers == 0:
+   numbers_list = int(input("введите числа: "))
+   if numbers_list == 0:
       break
    else:
-      numbers_list.append(numbers)
-print("Максимальное значение введеных чисел: " + str(max(numbers_list)))
-print("Минимальное значение введеных чисел: " + str(min(numbers_list)))
-print("Сумма всех введеных чисел: " + str((sum(numbers_list))))
-print("Среднее арифметическое введеных чисел: " + str(int(sum(numbers_list) / len(numbers_list))))
-num = [i for i in numbers_list if i % 2 == 0]
-print("Четные числа :" + str((num)))
-print("Сумма четных чисел: " + str(sum(num)))
-num2 = [i for i in numbers_list if i % 2 == 1]
-print("Нечетные числа :" + str((num2)))
-print("Сумма нечетных чисел: " + str(sum(num2)))
-num3 = [i for i in numbers_list if i % 2 == 1]
+      sum += numbers_list
+      ser += 1
+      if (numbers_list %2 == 0):
+         del1 += 1
+      else:
+         del2 += 1
+         if numbers_list > qmax:
+            qmax = numbers_list
+            q = q + numbers_list
+         elif numbers_list < qmin:
+            qmin = numbers_list
+            q = q + numbers_list
+print ("Сумма введенных чисел " + str(sum))
+print("Среднее арифметическое чисел " + str(sum / ser))
+print("Количество четных чисел : " + str(del1))
+print("Количество нечетных чисел : " + str(del2))
+print("Максимально число : " + str(qmax))
+print("Минимально число : " + str(qmin))
