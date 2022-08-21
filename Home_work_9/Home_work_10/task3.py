@@ -1,0 +1,15 @@
+planet = set(range(1,20))
+circus = set(range(1,11))
+stadion = set(range(6,12))
+planet_circus = set(range(1,6))
+planet_stadion = set(range(7,10))
+circus_stadion = set(range(6,7))
+ill = 3
+b = (planet - planet_circus - planet_stadion )
+b1 = len(b)
+c = (circus - planet_circus - circus_stadion)
+c1 = len(c)
+d = (stadion -planet_stadion - circus_stadion)
+d1 = len(d)
+sum_stud = b1+ c1 + d1
+print("В классе " + str(len(planet_circus | planet_stadion | circus_stadion) + ill + sum_stud) + " учеников")
