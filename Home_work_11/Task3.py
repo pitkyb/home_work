@@ -1,30 +1,16 @@
-def simpl_num():
-    num = 1
-    while num < 100:
-        if num > 1:
-            for i in range(2, num):
-                if (num % i) == 0:
-                    break
-            else:
-                yield num
-        num += 1
+def simpl_num_gen(a,b):
+    simpl_num = []
+    for number in range(a, b + 1):
+        for i in simpl_num:
+            if number % i == 0:
+                break
+        else:
+            simpl_num.append(number)
+            yield str(number)
 
 
-def simpl_num_1(x):
-    for num in x:
-        if (num % 2) != 0:
-            yield num
-
-
-simpl_dimple = simpl_num_1(simpl_num())
-
-for i in simpl_dimple:
-    print(i, end=' ')
-
-
-
-
-
+for x in simpl_num_gen(2,100):
+    print(x,end=' ')
 
 
 
