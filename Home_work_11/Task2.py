@@ -6,11 +6,3 @@ print(betta)
 
 
 
-
-# c = lambda x, y=2: x**y
-# x = c(10)
-# print(x)
-# fff = range(1,x+1)
-# fffa = (list(fff))
-# c1 = list(map(lambda x, y=2: x**y,fffa))
-# print(c1)

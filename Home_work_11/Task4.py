@@ -9,7 +9,8 @@ def multiple(func):
       x.sort()
       print(" ", "_"*len(str(x[-1])), " ", "_"*13, " ", "_"*10)
       for i in range(len(x)):
-         print("|", str(x[i]).ljust(len(str(x[-1])), " "), "|", "кратное 3 ".ljust(13, " ") if x[i] % 3 == 0
+         print("|", str(x[i]).ljust(len(str(x[-1])), " "),
+               "|", "кратное 3 ".ljust(13, " ") if x[i] % 3 == 0
                else "не кратное 3".ljust(13, " "),
                "|", "парное ".ljust(10, " ") if x[i] % 2 == 0
                else "непарное".ljust(10, " "), "|")
