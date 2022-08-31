@@ -12,7 +12,8 @@ def sort_matrix():
                 list_sum[i], list_sum[j] = list_sum[j], list_sum[i]
                 flag = True
                 for colum in range(M):
-                    matrix[colum][i], matrix[colum][j] = matrix[colum][j], matrix[colum][i]
+                    matrix[colum][i], matrix[colum][j] \
+                        = matrix[colum][j], matrix[colum][i]
     # сортировка нечетных столбцов
     for colum1 in range(M):
         if colum1 % 2 != 0:
@@ -22,7 +23,8 @@ def sort_matrix():
                 for i in range(M - 1):
                     j = i + 1
                     if matrix[i][colum1] > matrix[j][colum1]:
-                        matrix[i][colum1], matrix[j][colum1] = matrix[j][colum1], matrix[i][colum1]
+                        matrix[i][colum1], matrix[j][colum1] \
+                            = matrix[j][colum1], matrix[i][colum1]
                         flag = True
         # сортировка четных столбцов
         else:
@@ -32,7 +34,8 @@ def sort_matrix():
                 for i in range(M - 1):
                     j = i + 1
                     if matrix[i][colum1] < matrix[j][colum1]:
-                        matrix[i][colum1], matrix[j][colum1] = matrix[j][colum1], matrix[i][colum1]
+                        matrix[i][colum1], matrix[j][colum1] \
+                            = matrix[j][colum1], matrix[i][colum1]
                         flag = True
 
 
